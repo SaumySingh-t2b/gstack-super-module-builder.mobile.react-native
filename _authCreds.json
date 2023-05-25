@@ -1,0 +1,8 @@
+{
+  "email": "abc@gmail.com",
+  "username": "john_dao",
+  "password": "Pass1234",
+  "country_code": "91",
+  "phone_number": "1234567890",
+  "default_env": "prod"
+}

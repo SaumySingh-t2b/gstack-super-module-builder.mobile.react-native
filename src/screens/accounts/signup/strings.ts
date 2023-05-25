@@ -1,0 +1,15 @@
+export const STRINGS = {
+  SIGNUP_TITLE: 'Sign Up',
+  EMAIL_PLACEHOLDER: 'Email Address',
+  FIRSTNAME_PLACEHOLDER: 'First Name',
+  LASTNAME_PLACEHOLDER: 'Last Name',
+  PASSWORD_PLACEHOLDER: 'Password',
+  EMPTY_EMAIL: 'An email is required',
+  EMPTY_FIRSTNAME: 'First name is required',
+  EMPTY_LASTNAME: 'Last name is required',
+  EMPTY_PASSWORD: 'A password is required',
+  BUTTON_SUBMIT: 'Submit',
+  TEXT_PRIVACY_POLICY: 'I accept Privacy Policy',
+  TEXT_TERMS_AND_CONDITIONS: 'I accept Terms and Conditions',
+  SOMETHING_WENT_WRONG: 'Something went wrong',
+}

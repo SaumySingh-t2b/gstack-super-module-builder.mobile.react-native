@@ -1,0 +1,181 @@
+{
+  "appMetaData": {
+    "base_url": "https://jsonplaceholder.typicode.com/",
+    "show_drawer": true,
+    "show_bottom_tabs": true,
+    "bottom_tabs": [
+      {
+        "route": "Dashboard"
+      },
+      {
+        "route": "Profile",
+        "title": "Profile",
+        "label": "Me"
+      },
+      {
+        "route": "Notifications"
+      },
+      {
+        "route": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d",
+        "title": "Accounts",
+        "label": "Accounts",
+        "url": "https://cdn-icons-png.flaticon.com/512/1144/1144760.png"
+      },
+      {
+        "route": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6e",
+        "title": "Settings",
+        "label": "Settings",
+        "url": "https://cdn-icons-png.flaticon.com/512/1828/1828859.png",
+        "iconSize": 24
+      }
+    ]
+  },
+
+  "screens": [
+    {
+      "route": "Dashboard",
+      "title": "Dashboard",
+      "components": [
+        {
+          "name": "ListBuilder",
+          "props": {
+            "baseUrl": "https://jsonplaceholder.typicode.com/",
+            "url": "posts/",
+            "entity": "vehicle",
+            "emptyItemTitle": "No Data Found",
+            "emptyItemSubtitle": "",
+            "itemType": "STANDARD",
+            "itemActionRoute": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb64",
+            "itemMapping": {
+              "title": "title",
+              "subtitle": "body",
+              "captionTopLeft": "title",
+              "captionTopRight": "time",
+              "captionBottomLeft": "valid",
+              "captionBottomRight": "date",
+              "imageUrl": "profile_picture",
+              "imageStaticUrl": "https://cdn-icons-png.flaticon.com/512/848/848043.png",
+              "imageShape": "CIRCULAR",
+              "imageSize": 36
+            },
+            "optionsList": [
+              {
+                "name": "Option A",
+                "navigateAction": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb62",
+                "api": "/delete/"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "route": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb62",
+      "title": "Demo2",
+      "description": "Demo 2 Screen",
+      "show_on_drawer": true
+    },
+    {
+      "route": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb63",
+      "title": "Demo3",
+      "description": "Demo 3 Screen",
+      "show_on_drawer": true,
+      "components": [
+        {
+          "name": "DetailViewBuilder",
+          "props": {
+            "type": "TABULAR",
+            "cardTitle": "title",
+            "cardSubtitle": "title",
+            "keyMapping": [
+              {
+                "key": "title",
+                "label": "Title"
+              },
+              {
+                "key": "body",
+                "label": "Description"
+              }
+            ]
+          },
+          "detailData": {
+            "title": "Accounts",
+            "body": "Screen description"
+          }
+        }
+      ]
+    },
+    {
+      "route": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb64",
+      "title": "Demo4",
+      "description": "Demo 4 Screen",
+      "show_on_drawer": true,
+      "components": [
+        {
+          "name": "DetailViewBuilder",
+          "props": {
+            "type": "TABULAR",
+            "cardTitle": "",
+            "cardSubtitle": "string",
+            "keyMapping": [
+              {
+                "key": "title",
+                "label": "Title"
+              },
+              {
+                "key": "body",
+                "label": "Description"
+              }
+            ],
+            "detailData": {
+              "title": "Accounts",
+              "body": "Screen description"
+            }
+          }
+        },
+        {
+          "name": "MapViewBuilder",
+          "props": {
+            "followsUserLocation": true,
+            "isFullScreen": false,
+            "location": {
+              "latitude": 28.70406,
+              "longitude": 77.102493
+            }
+          }
+        }
+      ]
+    },
+    {
+      "route": "DashboardDetail",
+      "components": [
+        {
+          "name": "MapViewBuilder",
+          "props": {
+            "followsUserLocation": true,
+            "showsUserLocation": true,
+            "supportFullScreen": true,
+            "isFullScreen": false,
+            "location": {
+              "latitude": 28.70406,
+              "longitude": 77.102493
+            }
+          }
+        }
+      ]
+    }
+  ],
+
+  "profileScreenMetaData": {
+    "viewMode": "INPUT_TYPE"
+  },
+  "profile": {
+    "user": {
+      "first_name": "John",
+      "last_name": "Dao",
+      "phone": "9876543210",
+      "country_code": "91",
+      "email": "abc@gmail.com"
+    }
+  }
+}

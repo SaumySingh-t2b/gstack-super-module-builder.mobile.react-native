@@ -1,0 +1,4 @@
+{
+  "_comment": "Add all the allowed domains who can change the env here",
+  "allowedDomainList": ["thoughts2binary.com"]
+}

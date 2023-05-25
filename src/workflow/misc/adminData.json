@@ -1,0 +1,168 @@
+[
+  {
+    "name": "ListBuilder",
+    "label": "List",
+    "props": [
+      {
+        "hint": "Select the Entity?",
+        "name": "entity",
+        "type": "EntityList",
+        "label": "Entity",
+        "fetch_url": "/api/v1/entities/list/"
+      },
+      {
+        "hint": "Relative Url of the endpoint",
+        "name": "url",
+        "type": "TextInput",
+        "label": "Endpoint"
+      },
+      {
+        "hint": "Base Url domain of the system",
+        "name": "baseUrl",
+        "type": "TextInput",
+        "label": "Base Url"
+      },
+      {
+        "hint": "Select Item type",
+        "name": "itemType",
+        "type": "Select",
+        "label": "List Row Type",
+        "options": ["ADVANCED", "STANDARD"],
+        "required": true
+      },
+      {
+        "hint": "Empty Item Title",
+        "name": "emptyItemTitle",
+        "type": "TextInput",
+        "label": "Title for empty list"
+      },
+      {
+        "hint": "Empty Item subtitle",
+        "name": "emptyItemSubtitle",
+        "type": "TextInput",
+        "label": "Subtitle for empty list"
+      },
+      {
+        "hint": "On button press navigate to which screen?",
+        "name": "itemActionRoute",
+        "type": "RouteUUID",
+        "label": "Row Click Action"
+      },
+      {
+        "hint": "Object keys from which data will to load from",
+        "name": "itemMapping",
+        "type": "APIKeyMapping",
+        "label": "Row items mapping",
+        "keys": [
+          {
+            "name": "title",
+            "type": "EntityField",
+            "label": "Title",
+            "required": true
+          },
+          {
+            "name": "subtitle",
+            "type": "EntityField",
+            "label": "Sub Title"
+          },
+          {
+            "name": "captionTopLeft",
+            "type": "EntityField",
+            "label": "Caption Top Left"
+          },
+          {
+            "name": "captionTopRight",
+            "type": "EntityField",
+            "label": "Caption Top Right"
+          },
+          {
+            "name": "captionBottomLeft",
+            "type": "EntityField",
+            "label": "Caption Bottom Left "
+          },
+          {
+            "name": "captionBottomRight",
+            "type": "EntityField",
+            "label": "Caption Bottom Right"
+          },
+          {
+            "name": "imageUrl",
+            "type": "EntityField",
+            "label": "Image Url"
+          },
+          {
+            "name": "imageStaticUrl",
+            "type": "EntityField",
+            "label": "Image Static Url"
+          },
+          {
+            "name": "imageShape",
+            "type": "Select",
+            "label": "Image Shape",
+            "options": ["CIRCLE", "SQUARE", "ROUND"]
+          },
+          {
+            "name": "imageSize",
+            "type": "NumberInput",
+            "label": "Image Size"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MapViewBuilder",
+    "label": "MapView",
+    "props": [
+      {
+        "hint": "Will track & move the map accordingly",
+        "name": "followsUserLocation",
+        "type": "Checkbox",
+        "label": "Track the current User location"
+      },
+      {
+        "hint": "Will show a full screen map view on click",
+        "name": "supportFullScreen",
+        "type": "Checkbox",
+        "label": "Show Full Screen button"
+      },
+      {
+        "hint": "Will show the current location on map",
+        "name": "showsUserLocation",
+        "type": "Checkbox",
+        "label": "Show Current Location"
+      }
+    ]
+  },
+  {
+    "name": "DetailViewBuilder",
+    "label": "DetailView",
+    "props": [
+      {
+        "hint": "Detail view Type",
+        "name": "type",
+        "type": "Select",
+        "label": "Select Card Type",
+        "options": ["TABULAR", "MINIMAL"]
+      },
+      {
+        "hint": "Detail view Title",
+        "name": "cardTitle",
+        "type": "TextInput",
+        "label": "Title"
+      },
+      {
+        "hint": "Detail view subtitle",
+        "name": "cardSubtitle",
+        "type": "TextInput",
+        "label": "Subtitle"
+      },
+      {
+        "hint": "Detail View Mapping",
+        "name": "keyMapping",
+        "type": "KeyMapping",
+        "label": "Detail View Mapping"
+      }
+    ]
+  }
+]

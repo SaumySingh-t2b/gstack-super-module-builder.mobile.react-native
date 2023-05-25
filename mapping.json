@@ -1,0 +1,72 @@
+{
+  "strict": {
+    "text-heading-1-font-size": 50,
+    "text-heading-1-font-weight": "700",
+
+    "text-heading-2-font-size": 34,
+    "text-heading-2-font-weight": "400",
+
+    "text-heading-3-font-size": 28,
+    "text-heading-3-font-weight": "700",
+
+    "text-heading-4-font-size": 24,
+    "text-heading-4-font-weight": "700",
+
+    "text-heading-5-font-size": 20,
+    "text-heading-5-font-weight": "700",
+
+    "text-heading-6-font-size": 17,
+    "text-heading-6-font-weight": "700",
+
+    "text-subtitle-1-font-size": 15,
+    "text-subtitle-1-font-weight": "600",
+
+    "text-subtitle-2-font-size": 12,
+    "text-subtitle-2-font-weight": "600",
+
+    "text-paragraph-1-font-size": 16,
+    "text-paragraph-1-font-weight": "400",
+
+    "text-paragraph-2-font-size": 13,
+    "text-paragraph-2-font-weight": "400",
+
+    "text-caption-1-font-size": 11,
+    "text-caption-1-font-weight": "800",
+
+    "text-caption-2-font-size": 10,
+    "text-caption-2-font-weight": "400",
+
+    "text-label-font-size": 12,
+    "text-label-font-weight": "800"
+  },
+  "components": {
+    "Button": {
+      "appearances": {
+        "filled": {
+          "variantGroups": {
+            "status": {
+              "danger": {
+                "state": {
+                  "disabled": {
+                    "borderColor": "color-basic-1200",
+                    "backgroundColor": "color-basic-1200",
+                    "textColor": "color-basic-500"
+                  }
+                }
+              },
+              "primary": {
+                "state": {
+                  "disabled": {
+                    "borderColor": "color-basic-1200",
+                    "backgroundColor": "color-basic-1200",
+                    "textColor": "color-basic-500"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

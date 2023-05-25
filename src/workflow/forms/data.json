@@ -1,0 +1,55 @@
+{
+  "post_url": "/create/",
+  "put_url": "/update/",
+  "formMetaData": [
+    {
+      "key": "first_name",
+      "placeholder": "First Name",
+      "validations": {
+        "is_required": true,
+        "min_length": 3,
+        "max_length": 48
+      }
+    },
+    {
+      "key": "last_name",
+      "placeholder": "Last Name",
+      "validations": {
+        "is_required": false,
+        "min_length": 2,
+        "max_length": 48
+      }
+    },
+    {
+      "key": "password",
+      "placeholder": "Password",
+      "field_type": "PASSWORD",
+      "validations": {
+        "is_required": true,
+        "min_length": 4,
+        "max_length": 32
+      }
+    },
+    {
+      "key": "email",
+      "placeholder": "Email",
+      "field_type": "EMAIL",
+      "disabled": true,
+      "validations": {
+        "is_required": true,
+        "min_length": 5,
+        "max_length": 64
+      }
+    },
+    {
+      "key": "phone",
+      "placeholder": "Phone Number",
+      "field_type": "PHONE",
+      "validations": {
+        "is_required": false,
+        "min_length": 10,
+        "max_length": 15
+      }
+    }
+  ]
+}

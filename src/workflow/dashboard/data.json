@@ -1,0 +1,64 @@
+{
+  "listMetaData": {
+    "url": "posts/",
+    "open_detail": true,
+    "detail_url": "posts/${pk}/",
+    "components": [
+      {
+        "key": "map_view",
+        "name": "MapViewBuilder",
+        "props": {}
+      }
+    ]
+  },
+  "detailMetaData": {
+    "keyMapping": [
+      {
+        "key": "title",
+        "label": "Title"
+      },
+      {
+        "key": "body",
+        "label": "Description"
+      },
+      {
+        "key": "title",
+        "label": "Title"
+      },
+      {
+        "key": "body",
+        "label": "Description"
+      },
+      {
+        "key": "title",
+        "label": "Title"
+      },
+      {
+        "key": "body",
+        "label": "Description"
+      },
+      {
+        "key": "body",
+        "label": "Description"
+      },
+      {
+        "key": "title",
+        "label": "Title"
+      },
+      {
+        "key": "body",
+        "label": "Description"
+      },
+      {
+        "key": "title",
+        "label": "Title"
+      },
+      {
+        "key": "body",
+        "label": "Description"
+      }
+    ],
+    "title": "This is Title",
+    "sub_title": "This is test subtitle"
+  }
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "route": ["Name of Screen inside GraniteStack"],
+    "mandatory_fields": ["key1_inside_notification", "key2_inside_notification"],
+    "route_params": {"screen_param_name": "key_inside_notification"}
+  },
+  {
+    "route": ["Name of Stack inside GraniteStack", "Name of Screen inside the previous Stack"],
+    "mandatory_fields": ["key1_inside_notification"]
+  }
+]
