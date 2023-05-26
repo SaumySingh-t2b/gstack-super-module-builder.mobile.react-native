@@ -13,17 +13,13 @@ import {SafeAreaView} from '@react-native-granite/component'
 
 import {STRINGS} from '../strings'
 import {AlertUtils, AuthUtil} from 'src/utils'
-import {APP_STRINGS, STORAGE_KEYS} from 'src/constants'
+import {APP_STRINGS, AppSingleton, ENDPOINTS, STORAGE_KEYS} from 'src/constants'
 import {ThemeContext, useAuthProvider} from 'src/context'
 import {ListItem} from 'src/components'
 import {UserProfile} from 'src/workflow/profile'
 
 // global constants
 const STACK = [
-  // {
-  //   name: 'Settings',
-  //   icon: 'ios-settings-sharp',
-  // },
   {
     name: 'Logout',
     icon: 'log-out-outline',
@@ -31,6 +27,7 @@ const STACK = [
 ]
 
 const CustomDrawer = (props: DrawerContentComponentProps) => {
+  const TRUE = 'true'
   const {userProfile, appScreens} = useAuthProvider()
   const theme = useTheme()
   const themeContext = useContext(ThemeContext)
@@ -38,6 +35,9 @@ const CustomDrawer = (props: DrawerContentComponentProps) => {
     console.log('onDrawerItemPress -> stack', stack)
     if (stack == 'Logout') {
       onLogOutPress()
+      return
+    } else if (stack == 'GoToGStackDashboard') {
+      onGoToGStackDashboardPress()
       return
     } else if (stack == 'SplashScreen') {
       Router.toggleDrawer()
@@ -47,6 +47,10 @@ const CustomDrawer = (props: DrawerContentComponentProps) => {
     Router.navigate('App', {
       screen: stack,
     })
+  }
+  const onGoToGStackDashboardPress = () => {
+    Router.replace('GStackApp')
+    themeContext.toggleTheme()
   }
 
   const onLogOutPress = () => {
@@ -59,6 +63,7 @@ const CustomDrawer = (props: DrawerContentComponentProps) => {
         onPress: async () => {
           await LocalStorage.set(STORAGE_KEYS.AUTH_TOKEN, null)
           Router.replace('GStackApp')
+          // GraniteApp.logout()
           themeContext.toggleTheme()
         },
       },
@@ -104,6 +109,18 @@ const CustomDrawer = (props: DrawerContentComponentProps) => {
               onPress={() => onDrawerItemPress(screen.route)}
             />
           ))}
+
+        {AppSingleton.IS_RUNNING_IN_SUPER_APP === TRUE ? (
+          <DrawerItem
+            icon={() =>
+              true ? (
+                <Icon name={'arrow-undo-circle-outline'} size={25} />
+              ) : null
+            }
+            label={() => renderDrawerLabel('Go back to GStack Dashboard')}
+            onPress={() => onDrawerItemPress('GoToGStackDashboard')}
+          />
+        ) : null}
 
         {[STACK[STACK.length - 1]]?.map((screen) => (
           <DrawerItem

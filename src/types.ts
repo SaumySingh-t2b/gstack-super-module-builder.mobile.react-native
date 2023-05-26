@@ -130,6 +130,7 @@ export type AppSingletonProps = {
 }
 export type AppSingletonPropss = {
   organisation_id: number
+  IS_RUNNING_IN_SUPER_APP: string | undefined
 }
 export type AuthProps = {
   token?: string | null

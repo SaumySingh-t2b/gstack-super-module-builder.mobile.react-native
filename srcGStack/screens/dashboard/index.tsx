@@ -37,7 +37,7 @@ export const Dashboard = ({navigation}: AppScreenProps<'Dashboard'>) => {
       <EmptyItem visible={true} title="SuperApp" />
 
       {/* <ListBuilder
-        url={'gstack/v1/project/'}
+        url={'gstack/v1/project/?page=100'}
         itemMapping={{
           title: 'name',
           subtitle: 'description',

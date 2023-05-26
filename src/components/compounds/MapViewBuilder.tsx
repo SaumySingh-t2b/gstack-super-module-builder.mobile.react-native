@@ -57,7 +57,7 @@ export const MapViewBuilder = ({
             styles.container,
             isFullScreen && {height: WINDOW_HEIGHTS},
           ]}
-          scrollEnabled={false}
+          scrollEnabled={true}
           minZoomLevel={Platform.OS === 'android' ? 16 : 0}
           zoomControlEnabled={true}
           followsUserLocation={true}

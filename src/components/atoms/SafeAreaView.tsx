@@ -6,36 +6,29 @@ import {Router} from '@react-native-granite/core'
 import {Layout} from '@ui-kitten/components'
 
 import {ThemeContext} from 'src/context'
+import {AppSingleton} from 'src/constants'
 
-let duration: number
-let prevTapTime: number
 export const SafeAreaView = ({children}: any) => {
-  const MIN_DURATION = 300
+  const NUMBER_OF_POINTER = 2
+  const TRUE = 'true'
   const themeContext = React.useContext(ThemeContext)
 
   const onLongPress = (event: any) => {
-    if (duration <= MIN_DURATION) {
-      if (event.nativeEvent.state === State.ACTIVE) {
-        Router.replace('GStackApp')
-        themeContext.toggleTheme()
-      }
+    if (
+      event.nativeEvent.state === State.ACTIVE &&
+      event.nativeEvent.numberOfPointers === NUMBER_OF_POINTER &&
+      AppSingleton.IS_RUNNING_IN_SUPER_APP === TRUE
+    ) {
+      Router.replace('GStackApp')
+      themeContext.toggleTheme()
     }
-  }
-
-  const onBegan = () => {
-    // runs every time when gesture pressed
-    if (prevTapTime) {
-      duration = Date.now() - prevTapTime
-    }
-    prevTapTime = Date.now()
   }
 
   return (
     <RawSafeAreaView style={style.container}>
       <LongPressGestureHandler
         onHandlerStateChange={onLongPress}
-        minDurationMs={1500}
-        onBegan={onBegan}>
+        minDurationMs={1500}>
         <Layout style={style.container}>{children}</Layout>
       </LongPressGestureHandler>
     </RawSafeAreaView>
